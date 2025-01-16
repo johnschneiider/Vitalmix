@@ -41,10 +41,18 @@ SECRET_KEY = 'django-insecure-cu7eb^_s7273zzm@l=-v4l7+(@o1ict4#0%2ruh^1_28)4x8y#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'd189-181-129-245-162.ngrok-free.app']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'd189-181-129-245-162.ngrok-free.app',  # Dominio ngrok
+    'www.vitalmix.com.co',  # Dominio de producción
+    'vitalmix.com.co'       # Dominio de producción sin www
+]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://d189-181-129-245-162.ngrok-free.app',
+    'https://d189-181-129-245-162.ngrok-free.app',  # Origen ngrok
+    'https://www.vitalmix.com.co',  # Origen de producción
+    'https://vitalmix.com.co'       # Origen de producción sin www
 ]
 
 # Application definition
