@@ -9,4 +9,5 @@ __pycache__/
 **/migrations/*.pyc
 **/migrations/*.pyo
 **/migrations/__pycache__/
-
+.bash_history
+.ssh/
