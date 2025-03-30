@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             resultado.textContent = `¡Tu premio es: ${premioSeleccionado.texto}!`;
             resultado.style.display = 'block';
+            btnGirar.style.display = 'none'
             cerrarModal.style.display = 'inline-block';
-            btnGirar.disabled = false; // Reactivar el botón después del giro
         }, 12000);
     });
 
@@ -64,3 +64,4 @@ document.addEventListener('DOMContentLoaded', () => {
         pedidoForm.submit();
     });
 });
+
