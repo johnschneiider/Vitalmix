@@ -1,37 +1,56 @@
-PASOS PARA SUBIR LOS CAMBIOS A GITHUB
-# 1️⃣ Ir a la carpeta del proyecto
+PASOS PARA SUBIR LOS CAMBIOS DE MI PC A GITHUB
+1️ Ir a la carpeta del proyecto
 cd ruta/a/tu/proyecto
 
-# 2️⃣ Verificar el estado de los cambios
+2️ Verificar el estado de los cambios
 git status
 
-# 3️⃣ Agregar todos los archivos modificados al área de preparación
+3️ Agregar todos los archivos modificados al área de preparación
 git add .
 
-# 4️⃣ Hacer commit con un mensaje descriptivo
+4️ Hacer commit con un mensaje descriptivo
 git commit -m "Descripción breve de los cambios"
 
-# 5️⃣ Asegurarse de estar en la rama main
-git branch
-git checkout main
+5️ Asegurarse de estar en la rama correcta
+git switch main  # Alternativa moderna a checkout
 
-# 6️⃣ Subir los cambios al repositorio de GitHub
+6️ Subir los cambios al repositorio en GitHub
 git push origin main
 
 
 
 
 
+
 entro a la vps
+
+
+PARA PONERLOS EN LA VPS
+1️ Conectarse a la VPS
 ssh root@92.113.39.100
 pongo contraseña
 pXb@Q+BXAFS4Ldt
 
-
+2️ Ir al directorio del proyecto
 cd ~/vitalmix
+
+3️ Descargar los cambios más recientes de GitHub
 git pull origin main
+
+4️ Activar el entorno virtual (si no está activado)
 source venv/bin/activate
+
+5️ Instalar nuevas dependencias si hay cambios en requirements.txt
 pip install -r requirements.txt
+
+6️ Aplicar migraciones de la base de datos
 python manage.py migrate
+
+7️ Recolectar archivos estáticos
 python manage.py collectstatic --noinput
+
+8️ Reiniciar el servicio para aplicar los cambios
 systemctl restart vitalmix
+
+9️ Verificar que todo esté funcionando correctamente
+systemctl status vitalmix
