@@ -6,4 +6,7 @@ media/
 __pycache__/
 *.pyc
 *.pyo
-migrations/
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/__pycache__/
+
