@@ -57,6 +57,8 @@
     gap: 10px;
     align-items: center;
     margin-left: auto;
+
+
 }
 
 .get-quote .btn {
@@ -190,6 +192,10 @@
         justify-content: space-between;
     }
 
+    .username{
+        display: none;
+    }
+
     .logo img {
         max-width: 100px; /* Ajusta el tamaño del logo si es necesario */
         height: auto;
@@ -209,6 +215,7 @@
     .get-quote a {
         padding: 5px 10px; /* Ajusta el tamaño de los botones */
         font-size: 14px;
+        margin-right: 40px;
     }
 }
 
